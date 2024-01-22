@@ -70,7 +70,7 @@ async def request_alternative(kw: str) -> str:
     ) as client:
         logger.debug(f"Requesting alternative for `{kw}`")
         resp = await client.post(
-            "https://www.pingti.xyz/api/chat",
+            "https://www.pingti.app/api/chat",
             json={"messages": [{"role": "user", "content": kw}]},
             headers={
                 "User-Agent": (
