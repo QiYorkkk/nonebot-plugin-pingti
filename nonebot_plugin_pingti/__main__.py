@@ -26,6 +26,8 @@ mat_pingti = on_alconna(
     use_cmd_start=True,
 )
 
+# 设置处理器的属性来阻断后续低优先级指令
+mat_pingti.block = True
 
 @mat_pingti.handle()
 async def _(matcher: AlconnaMatcher, res: CommandResult):
